@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+          <th>button</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+          <td><button class="btnremove">remove</button></td>
+        </tr>
+        <tr>
+          <td>Centro comercial </td>
+          <td>Francisco Chang</td>
+          <td>Mexico</td>
+          <td><button class="btnremove">remove</button></td>
+        </tr>
+      </table>
+    
+   <section>
+    <div><h1 id="head">dhinesh</h1>
+        <p>ranjith</p>
+    </div>
+    <div>
+
+        <h1>deepak</h1>
+        <p>name</p>
+    </div>
+    <section>
+        <h1>vidula</h1>
+        <p id="happy">happy birthday</p>
+    </section>
+<span>walter white</span>
+<span>smith</span>
+<p id="copy">always busy</p>
+<script>
+    const value=document.getElementById("head")
+    const par =value.parentNode;
+    par.style.backgroundColor= "black";
+const sow= par.firstElementChild;
+console.log(sow);    
+
+const section= document.getElementsByTagName("span")[1];
+console.log(section.nextElementSibling); 
+const add=document.getElementById("happy").innerHTML;
+const copy1=document.getElementById("copy").innerHTML=add;
+
+// create element
+const create= document.createElement("p");
+create.innerHTML="Hello <h1>every</h1> one ";
+create.style.color="blue";
+create.style.backgroundColor="yellow";
+const body= document.querySelector("body");
+body.appendChild(create);
+// insertbefore
+const addbefore= document.createElement("p")
+addbefore.innerHTML="bfore adding value";
+body.insertBefore(addbefore,create);
+
+    // remove by clicking event
+   const remove= document.querySelectorAll(".btnremove");
+   remove.forEach((btn)=>{
+btn.addEventListener("click",function(){
+    const tt= this.parentNode.parentNode;
+    tt.remove();
+   
+})
+   })
+    
+
+</script>
+    
+    <!-- <div>
+        <h1>deepak</h1>
+        <p>name</p>
+    </div>
+    <div>
+        <h1>Dhinesh</h1>
+        <p>PARAGRAPH </p>  
+    </div>
+   </section>
+    
+    <script>
+const value= document.getElementsByTagName("h1");
+const parent= value[0].parentNode
+parent.style.backgroundColor="blue";
+parent.style.padding="20px" 
+</script> -->
+</body>
+</html>
